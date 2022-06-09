@@ -2,11 +2,11 @@
 $footer-background-color: $secondary-color
 $footer-info-background-color: $secondary-shade-color
 
-.site-footer
+footer
   .region
     +container
 
-  .footer-wrapper
+  .site-footer
     background-color: $footer-background-color
     padding: $container-padding
 
@@ -16,11 +16,11 @@ $footer-info-background-color: $secondary-shade-color
       flex-flow: row wrap
       justify-content: flex-end
 
-  .footer-info-wrapper
-    background-color: $footer-info-background-color
-    padding: $container-padding
+    &__info
+      background-color: $footer-info-background-color
+      padding: $container-padding
 
-    .region-footer-info
-      display: flex
-      flex-flow: row wrap
-      justify-content: center
+      .region-footer-info
+        display: flex
+        flex-flow: row wrap
+        justify-content: center

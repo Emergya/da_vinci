@@ -21,7 +21,7 @@ body
     padding: 3rem $container-padding
     width: 100%
 
-  .layout-wrapper
+  .site-layout
     +container
     display: flex
     flex-direction: column
@@ -33,7 +33,7 @@ body
       +breakpoint(0 $bellow-large)
         margin-bottom: 1rem
 
-    .layout-content
+    &__content
       width: 100%
       +breakpoint($large)
         flex-grow: 1
@@ -44,15 +44,11 @@ body
       +breakpoint($large)
         width: 23.5%
 
-      &.layout-sidebar-first
-        +breakpoint($large)
-          margin-right: 1.5%
-          order: -1
+    &__sidebar--first
+      +breakpoint($large)
+        margin-right: 1.5%
+        order: -1
 
-      &.layout-sidebar-second
-        +breakpoint($large)
-          margin-left: 1.5%
-
-.ie
-  .layout-container
-    display: block
+    &__sidebar--second
+      +breakpoint($large)
+        margin-left: 1.5%
