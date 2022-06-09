@@ -6,46 +6,54 @@ global-css:
 global-js:
   header: true
   js:
-    js/da-vinci.js: {}
-    js/vendors/jquery.unevent.js: {}
-    js/vendors/jquery.viewport.js: {}
-    js/vendors/css_browser_selector.js: {}
+    js/dv-main.js: {}
     js/custom.js: {}
   dependencies:
-    - core/jquery
-    - core/jquery.once
-    - core/modernizr
     - core/drupal
-    - core/popperjs
+    - core/jquery
+    - core/once
+    - da_vinci/libraries.jquery.imagesloaded
 
-# User login.
+
+
+## Automatic Load path is arg0/arg1 = arg0-arg1.
+# Example user/login.
 user-login:
   css:
     theme:
       css/user-login.css: {}
 
-# User register.
+# Example user/register.
 user-register:
   css:
     theme:
       css/user-register.css: {}
 
-# User password.
+# Example user/password.
 user-password:
   css:
     theme:
       css/user-password.css: {}
 
-# Theme settings.
-theme-settings:
-  css:
-    component:
-      css/da_vinci.select2.css: {}
-  js:
-    js/da-vinci-settings.js: {}
-  dependencies:
-    - da_vinci/libraries.jquery.select2
 
+
+## Definition of libraries.
+
+# Detect when images have been loaded.
+libraries.jquery.imagesloaded:
+  remote: https://imagesloaded.desandro.com/
+  version: '4.1.4'
+  license:
+    name: MIT
+    url: http://opensource.org/licenses/mit-license.php
+    gpl-compatible: true
+  directory: jquery.imagesloaded
+  js:
+    https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js: { type: external, minified: true }
+  dependencies:
+    - core/jquery
+
+# Select2 gives you a customizable select box with support for searching, tagging and many other highly used options.
 libraries.jquery.select2:
   remote: https://select2.github.io/
   version: '4.0.13'
@@ -61,3 +69,46 @@ libraries.jquery.select2:
     https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js: { type: external, minified: true }
   dependencies:
     - core/jquery
+
+# The last carousel you'll ever need. Fully responsive, Swipe enabled, dots, arrows, callbacks, etc...
+libraries.jquery.slick:
+  remote: http://kenwheeler.github.io/slick/
+  version: '1.9.0'
+  license:
+    name: MIT
+    url: http://opensource.org/licenses/mit-license.php
+    gpl-compatible: true
+  directory: jquery.slick
+  css:
+    component:
+      https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css: { type: external, minified: true }
+  js:
+    https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js: { type: external, minified: true }
+  dependencies:
+    - core/jquery
+
+# A jQuery Masonry alternative with CSS-driven configuration.
+libraries.salvattore:
+  remote: https://salvattore.js.org/
+  version: '1.0.9'
+  license:
+    name: MIT
+    url: http://opensource.org/licenses/mit-license.php
+    gpl-compatible: true
+  directory: salvattore
+  js:
+    https://unpkg.com/salvattore@1.0.9/dist/salvattore.min.js: { type: external, minified: true }
+  dependencies:
+    - core/jquery
+
+
+
+## Dynamic Path (Need attach) Add {{ attach_library('mytheme/name_library') }} in a specific Template.
+
+# Example how load a library in a specific Template: {{ attach_library('da_vinci/floating-menu') }}.
+floating-menu:
+  js:
+    js/example.js: {}
+  css:
+    theme:
+      css/example.css: {}

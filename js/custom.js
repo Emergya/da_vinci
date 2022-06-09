@@ -3,11 +3,9 @@
  * Your custom code into javascript behaviour.
  */
 
-'use strict';
+(function ($, Drupal, once) {
 
-(function (Drupal, $) {
-  $(document).ready(function () {
 
-  });
-})(Drupal, jQuery);
+
+})(jQuery, Drupal, once);
 

@@ -7,35 +7,28 @@ $header-background-color: $secondary-color
     width: 100%
     z-index: 10
 
-    .wrapper-header
+    .site-header
       background-color: $header-background-color
       padding: $container-padding
-
-    .site-header
-      +container
       align-items: center
       display: flex
       flex-direction: row-reverse
       flex-wrap: wrap
+      +container
 
-      .wrapper
+      .region-header
         align-items: center
         display: flex
-        flex-direction: inherit
+        flex-grow: 1
+        justify-content: flex-end
 
-    .region-header
-      align-items: center
-      display: flex
-      flex-grow: 1
-      justify-content: flex-end
+        > *
+          &:not(:first-child)
+            margin-left: 1rem
 
-      > *
-        &:not(:first-child)
-          margin-left: 1rem
+        .block-system-branding-block
+          margin-right: auto
 
-      .block-system-branding-block
-        margin-right: auto
-
-      .menu--main
-        +breakpoint(0 $bellow-large)
-          display: none
+        .menu--main
+          +breakpoint(0 $bellow-large)
+            display: none

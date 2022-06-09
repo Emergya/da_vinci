@@ -47,8 +47,8 @@ gulp.task('default', function () {
   console.log('gulp ' + 'imagemin'.cyan + '                            ' + '# Minifiy your images in ./assets/images into ./images'.grey);
   console.log('gulp ' + 'mainStyles:dev'.cyan + '                      ' + '# Compile expanded css except "pages" directory and create a maps file.'.grey);
   console.log('gulp ' + 'pageStyles:dev'.cyan + '                      ' + '# Compile expanded css from "pages" directory exclusively and create a maps file.'.grey);
-  console.log('gulp ' + 'mainStyles:pro'.cyan + '                      ' + '# Compile compressed css except "pages" directory, apply autoprefixer to result.'.grey);
-  console.log('gulp ' + 'pageStyles:pro'.cyan + '                      ' + '# Compile compressed css from "pages" directory exclusively, apply autoprefixer to result.'.grey);
+  console.log('gulp ' + 'mainStyles:pro'.cyan + '                      ' + '# Compile compressed css except "pages" directory, autoprefixer to result.'.grey);
+  console.log('gulp ' + 'pageStyles:pro'.cyan + '                      ' + '# Compile compressed css from "pages" directory exclusively, autoprefixer to result.'.grey);
   console.log('');
   console.log('Debugging tasks'.yellow);
   console.log('gulp ' + 'sasslint'.cyan + '                            ' + '# Check sass files looking for a bad code practises .'.grey);

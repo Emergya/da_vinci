@@ -23,44 +23,10 @@ function da_vinci_preprocess_html(&$variables) {
   if (theme_get_setting('styling')) {
     $variables['styling_code'] = theme_get_setting('styling_code');
   }
-  if (theme_get_setting('body-font')) {
-    $body_font = str_replace('+', ' ', theme_get_setting('body-font'));
-    $variables['fonts'] = theme_get_setting('body-font');
-    if (isset($variables['styling_code'])) {
-      $variables['styling_code'] .= '
-      body {
-        font-family: ' . $body_font . ';
-      }';
-    }
-    else {
-      $variables['styling_code'] = 'body {
-        font-family: ' . $body_font . ';
-      }';
-    }
-  }
-  if (theme_get_setting('header-font')) {
-    $header_font = str_replace('+', ' ', theme_get_setting('header-font'));
-    if (theme_get_setting('body-font')) {
-      $variables['fonts'] .= '|' . theme_get_setting('header-font');
-    }
-    else {
-      $variables['fonts'] = theme_get_setting('header-font');
-    }
-    if (isset($variables['styling_code'])) {
-      $variables['styling_code'] .= '
-      h1, h2, h3, h4, h5, h6 {
-        font-family: ' . $header_font . ';
-      }';
-    }
-    else {
-      $variables['styling_code'] = 'h1, h2, h3, h4, h5, h6 {
-        font-family: ' . $header_font . ';
-      }';
-    }
-  }
   if (!empty($variables['page']['featured_top'])) {
     $variables['attributes']['class'][] = 'has-featured-top';
   }
+
   $path = \Drupal::service('path.current')->getPath();
   $path_args = explode('/', $path);
   if (isset($path_args[1]) && isset($path_args[2]) && ($path_args[1] == 'node') && (is_numeric($path_args[2]))) {
