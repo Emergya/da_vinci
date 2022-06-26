@@ -25,8 +25,11 @@ for file in config/*/*da_vinci.*; do mv $file ${file//da_vinci/$CUSTOM_DA_VINCI}
 
 # Remove create_subtheme.sh file, we do not need it in customized subtheme.
 rm subtheme/create_subtheme.sh
+rm composer.json
+rm .git
+rm LICENSE.txt
 
 # mv {_,}$CUSTOM_DA_VINCI.theme
 grep -Rl da_vinci .|xargs sed -i -e "s/da_vinci/$CUSTOM_DA_VINCI/"
-sed -i -e "s/SASS Da Vinci Starter Kit Subtheme/$CUSTOM_DA_VINCI_NAME/" $CUSTOM_DA_VINCI.info.yml
+sed -i -e "s/Da Vinci/$CUSTOM_DA_VINCI_NAME/" $CUSTOM_DA_VINCI.info.yml
 echo "# Check the themes/custom folder for your new sub-theme."
