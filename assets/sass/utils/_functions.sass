@@ -7,6 +7,7 @@
 /// Strips unit suffix from value.
 /// @param {number} $num - number with unit.
 /// @return {number} number with the unit removed.
+
 @function _strip-unit($num)
   @if type-of($num) != "number"
     @warn "num: #{$num} is not a number"
@@ -52,3 +53,12 @@
 
 @function shade($color, $percentage)
   @return mix(black, $color, $percentage)
+
+/// Setup the function in your functions or helpers files, wherever you keep these bits.
+/// @param {Number} $from - valor to conversion.
+/// @return {Number}
+@function headings($from:1, $to:6)
+  @if $from == $to
+    @return 'h#{$from}'
+  @else
+    @return 'h#{$from},' + headings($from+1, $to)

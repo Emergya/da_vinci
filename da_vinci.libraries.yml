@@ -7,6 +7,7 @@ global-js:
   header: true
   js:
     js/dv-main.js: {}
+    js/messages.js: {}
     js/custom.js: {}
   dependencies:
     - core/drupal
@@ -105,10 +106,10 @@ libraries.salvattore:
 
 ## Dynamic Path (Need attach) Add {{ attach_library('mytheme/name_library') }} in a specific Template.
 
-# Example how load a library in a specific Template: {{ attach_library('da_vinci/floating-menu') }}.
-floating-menu:
+# Example how load a library in a specific Template: {{ attach_library('da_vinci/maintenance') }}.
+maintenance:
   js:
-    js/example.js: {}
+    js/maintenance.js: {}
   css:
     theme:
-      css/example.css: {}
+      css/maintenance.css: {}

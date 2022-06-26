@@ -1,5 +1,6 @@
 // Progress bar.
-$progress-bar-border-color: $main-color
+$progress-bar-border-color: $white
+$progress-bar-bg-color: $main-color
 $progress-track-bg-color: $white
 $progress-track-border-color: $border
 
@@ -11,10 +12,11 @@ $progress-track-border-color: $border
     background-image: none
     border-color: $progress-track-border-color
     border-radius: 0
+    height: 50px
 
   &__bar
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15)), linear-gradient(to right bottom, $main-color 0%, $main-color 25%, lighten($main-color, 8%) 25%, lighten($main-color, 8%) 50%, $main-color 50%, $main-color 75%, $main-color 100%)
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15)), linear-gradient(to right bottom, $progress-bar-bg-color 0%, $main-color 25%, lighten($progress-bar-bg-color, 8%) 25%, lighten($progress-bar-bg-color, 8%) 50%, $progress-bar-bg-color 50%, $progress-bar-bg-color 75%, $progress-bar-bg-color 100%)
     border-color: $progress-bar-border-color
-    // TODO: Debería pillarlo el autoprefix.
-    //background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15)), -webkit-linear-gradient(left top, $main-color 0%, $main-color 25%, lighten($main-color, 8%) 25%, lighten($main-color, 8%) 50%, $main-color 50%, $main-color 75%, $main-color 100%)
     border-radius: 0
+    height: 50px
+    background-size: 100px 100px

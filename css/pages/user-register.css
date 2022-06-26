@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700|Roboto:400,400i,700");
+@import url("https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Raleway+Dots&family=Raleway:wght@100;400&display=swap");
 /*
   @font-face
     font-family: 'Da-Vinci'
@@ -33,7 +33,7 @@
     border-color: transparent;
   }
   50% {
-    border-color: #f1f3f1;
+    border-color: #b4bcc4;
   }
 }
 
@@ -140,15 +140,6 @@
   100% {
     opacity: 1;
     transform: translateX(0);
-  }
-}
-
-@keyframes fadeOut {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
   }
 }
 
@@ -396,6 +387,11 @@
   color: transparent;
   font-size: 0;
   line-height: 0;
+}
+
+.border-region .region,
+.border-region main {
+  outline: 0.125rem #fad206 solid;
 }
 
 .pulse {

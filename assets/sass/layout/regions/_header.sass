@@ -1,5 +1,6 @@
 // Header.
 $header-background-color: $white
+$header-spaces: calc-rem(50px)
 
 .layout-container
 
@@ -8,19 +9,17 @@ $header-background-color: $white
     z-index: 10
 
     .site-header
-      background-color: $header-background-color
-      padding: $container-padding
       align-items: center
+      justify-content: center
       display: flex
-      flex-direction: row-reverse
-      flex-wrap: wrap
       +container
 
       .region-header
+        padding: $header-spaces
+        background-color: $header-background-color
+        border-radius: $header-spaces $header-spaces 0 0
         align-items: center
         display: flex
-        flex-grow: 1
-        justify-content: flex-end
 
         > *
           &:not(:first-child)

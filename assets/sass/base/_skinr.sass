@@ -11,13 +11,13 @@ html
 // BODY
 
 /// @ignore Body background color.
-$body-background-color: $cream
+$body-background-color: $lighter-color
 
 /// @ignore Default color.
-$default-color: $grey
+$default-color: $color
 
 /// @ignore Default font family.
-$default-font-family: $roboto
+$default-font-family: $secondary-font
 
 body
   background-color: $body-background-color
@@ -31,36 +31,24 @@ body
 // HEADINGS
 
 /// @ignore Titles font family.
-$title-font-family: $roboto-condensed
+$title-font-family: $main-font
 
 /// @ignore Titles color.
-$title-color: $secondary-shade-color
+$title-color: $main-color
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6
+#{headings(1,6)}
   color: $title-color
   font-family: $title-font-family
   font-weight: 700
   margin: 0
 
-h2,
-h3,
-h4,
-h5,
-h6
+#{headings(2,6)}
   margin: 2rem 0 .75rem
 
-h2,
-h3
+#{headings(2,3)}
   line-height: 1.25
 
-h4,
-h5,
-h6
+#{headings(4,6)}
   line-height: 1.4
 
 h1

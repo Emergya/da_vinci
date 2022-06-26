@@ -1,38 +1,77 @@
-// Messages.
-$status-color: $green
-$warning-color: $yellow
-$error-color: $red
+/*
+ * Style overwrites for the status message block.
 
-.messages
-  background-image: none
-  border-radius: 0
-  border-width: 0
-  box-shadow: none
-  color: $white
-  padding: $container-padding
+.simple-status-messages
+  position: fixed
+  top: 100px
+  right: 10px
+  z-index: 9999
+  width: 30%
+  transition: all 0.25s ease
 
-  + .messages
-    margin: 0
+.webform-message .simple-status-messages
+  top: 170px
 
-  &--status
-    background-color: $status-color
+@media screen and (max-width: 767px)
+  .simple-status-messages
+    width: 100%
+    position: unset
 
-    .messages--wrapper
-      +icomoon-text($ico-check, 24px, $white, left, start)
+.status-messages + .status-messages
+  margin-top: 0.769em
 
-  &--warning
-    background-color: $warning-color
+.simple-status-messages
+  .status-messages
+    position: relative
+    padding: 15px 20px 15px 60px
+    word-wrap: break-word
+    border: 1px solid
+    border-width: 1px 1px 1px 0
+    border-radius: 2px
+    background: no-repeat 10px 17px
+    overflow-wrap: break-word
 
-    .messages--wrapper
-      +icomoon-text($ico-warning, 24px, $white, left, start)
+  .js-webform-message__link
+    display: none !important
 
-  &--error
-    background-color: $error-color
+  .messages--status, .messages--info, .messages--webform
+    background-image: url(../images/checked.svg)
+    background-size: 16px
+    background-color: #f3faef
+    color: #325e1c
+    border-color: #c9e1bd #c9e1bd #c9e1bd transparent
+    box-shadow: -8px 0 0 #77b259
 
-    .messages--wrapper
-      +icomoon-text($ico-stop, 24px, $white, left, start)
+  .messages--warning
+    background-image: url(../images/warning.svg)
+    background-size: 16px
+    color: #734c00
+    border-color: #f4daa6 #f4daa6 #f4daa6 transparent
+    background-color: #fdf8ed
+    box-shadow: -8px 0 0 #e09600
 
-  a
-    color: $white
-    font-weight: 700
-    text-decoration: underline
+  .messages--error
+    background-image: url(../images/cancel.svg)
+    background-size: 44px
+    color: #a51b00
+    border-color: #f9c9bf #f9c9bf #f9c9bf transparent
+    background-color: #fcf4f2
+    box-shadow: -8px 0 0 #e62600
+
+  .status-message-close
+    border: none
+    padding: 0
+
+    span
+      position: absolute
+      right: 5px
+      top: 0
+      color: #000000
+      font-size: 16px
+      opacity: 0.25
+      border-bottom: none
+
+      &:hover, &:focus, &:active
+        color: #000000
+        text-decoration: none
+        opacity: 0.4

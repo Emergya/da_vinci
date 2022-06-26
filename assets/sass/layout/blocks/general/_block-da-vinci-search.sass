@@ -1,6 +1,6 @@
 // Search block
 $search-icon-color: $white
-$search-icon-active-color: $secondary-color
+$search-icon-active-color: $main-color
 
 .search-block-form
   form
@@ -16,6 +16,7 @@ $search-icon-active-color: $secondary-color
 
     .form-actions
       +icomoon($ico-search, 22px, $search-icon-color, 32px)
+      //+icomoon(seticon(search), 22px, $search-icon-color, 32px)
       margin-left: .5rem
       position: relative
 

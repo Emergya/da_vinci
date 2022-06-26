@@ -1,26 +1,11 @@
 INTRODUCTION
 ------------
-Da Vinci is a Drupal 8 theme. This theme is using Classy as base theme.
-Its very light weight for fast loading with modern look.
-Da Vinci uses:
-  - Sass 3 - with sourcemaps
-  - Gulp - 'A toolkit for automating painful or time-consuming tasks in your
-  development workflow'. http://gulpjs.com/
-  - Npm - To install and manage dependencies. https://www.npmjs.com/
-  - Bower - A package manager that 'can manage components that contain HTML,
-  CSS, JavaScript, fonts or even image files' https://bower.io/
-
-And...
-Like bower dependencies:
-  - Susy 2 - Grid Framework.
-  - Breakpoint - Helper for grid, excelent.
-  - Bourbon Refills - http://refills.bourbon.io/
-  - Sass Burger - For responsives menus.
-Like npm dependencies:
-  - Browsersync - See you changes in the browser without any reload
-  (Using with Gulp).
-  - Sass Globbing - Call your partials with /* or /** in your Main Sass.
-  - SassLint & JsHint - Test your code!
+Da Vinci is a modern and powerful starter theme with component-based Sass 
+and a mobile-first response. Accessible as a rule, it is standards compliant 
+and you will find it much easier to start with Da Vinci than start with 
+Bartik or Stark, even faster and easier than Bootstrap. This Theme has a 
+documentation where each file is explained, examples and useful code 
+comments in Twig, Sass and JavaScript are added.
 
 REQUIREMENTS
 ------------
@@ -69,7 +54,7 @@ INSTALLATION
 You're done :)
 
 
-USAGE
+QUICK START
 -----
 1.- CREATING A SUBTHEME:
 You should never modify a theme that is packaged and released from Drupal.org
