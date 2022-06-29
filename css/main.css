@@ -6,13 +6,14 @@
   box-sizing: border-box;
 }
 
-/*
-  @font-face
-    font-family: 'Da-Vinci'
-    font-style: normal
-    font-weight: normal
-    src: url('../fonts/Da-Vinci.eot?nk2pqb')
-    src: url('../fonts/Da-Vinci.eot?nk2pqb#iefix') format('embedded-opentype'), url('../fonts/Da-Vinci.ttf?nk2pqb') format('truetype'), url('../fonts/Da-Vinci.woff?nk2pqb') format('woff'), url('../fonts/Da-Vinci.svg?nk2pqb#Da-Vinci') format('svg') */
+@font-face {
+  font-family: 'Da-Vinci';
+  font-style: normal;
+  font-weight: normal;
+  src: url("../assets/fonts/Da-Vinci.eot?nk2pqb");
+  src: url("../assets/fonts/Da-Vinci.eot?nk2pqb#iefix") format("embedded-opentype"), url("../assets/fonts/Da-Vinci.ttf?nk2pqb") format("truetype"), url("../assets/fonts/Da-Vinci.woff?nk2pqb") format("woff"), url("../assets/fonts/Da-Vinci.svg?nk2pqb#Da-Vinci") format("svg");
+}
+
 @keyframes pulse {
   0% {
     transform: scale(1);
@@ -648,7 +649,7 @@ blockquote:before {
   background-color: transparent;
   border-radius: 0;
   color: #fad206;
-  content: "";
+  content: "";
   display: flex;
   font-family: "Da-Vinci";
   font-size: 2rem;
@@ -666,7 +667,7 @@ blockquote:after {
   background-color: transparent;
   border-radius: 0;
   color: #fad206;
-  content: "";
+  content: "";
   display: flex;
   font-family: "Da-Vinci";
   font-size: 2rem;

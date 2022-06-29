@@ -24,21 +24,7 @@ Node.js, you automatically get npm installed on your computer.
   To update npm version:
     npm install npm@latest -g
 
-  If they are ok, that commands will show us the versions, for example:
-  v6.x.x           (when npm -v)
-
-
-2.- Gulp, to automate tasks, like Sass compiling or browser reload.
-  To install Gulp:
-    npm install -g gulp
-    (Maybe, you need to use 'sudo')
-
-  Verify that Gulp.js has been installed correctly:
-    gulp -v
-  If it's ok, that command will show us the following:
-    CLI version x.x.x
-    Local version undefined
-
+  If they are ok, that commands will show us the versions.
 
 INSTALLATION
 ------------
@@ -55,25 +41,12 @@ You're done :)
 
 
 QUICK START
------
+-----------
 1.- CREATING A SUBTHEME:
 You should never modify a theme that is packaged and released from Drupal.org
 because, if you do, all your changes will be lost once that theme is updated.
 Instead, you should create a subtheme. Once you've done that, you can override
 styles, templates...
-
-Run drush --include="themes/contrib/da_vinci" da_vinci:subtheme 'My Theme'
-
-Optional options:
-  - machine-name: The machine-readable name of your sub-theme. This will be
-    auto-generated from the human-readable name if omitted.
-  - description: The description of your sub-theme.
-  - destination: The destination of your sub-theme.
-  - starterkit: The name of the starter kit to use. By default it is default
-    folder.
-
-More info in starterkits directory (README.md file)
-
 
 2.- USING GULP:
 To launch Gulp, you only need to go to your subtheme directory and then write
@@ -82,7 +55,6 @@ This command displays all the ways for use gulp.
 
 You can choose the command "gulp watch" too, which is much better so it shows
 which files have been overriden and, if there were any, show errors.
-
 
 3.- OVERRIDING AND ADDING STYLES:
 Once you have your 'Gulp watch' launched, everytime you write in a sass/js file
@@ -96,13 +68,11 @@ be removed when Gulp compiles.
 
 For more info, check README in /src and /assets/sass directory.
 
-
 4.- OVERRIDING TEMPLATES:
 Da Vinci is using Classy as base theme so an override is as simple as copying
 one of Classy's templates into your templates directory.
 
 More info in templates directory (README.md file)
-
 
 5.- PREPROCESS:
 You can affect the output of certain HTML via preprocess functions. For example,
@@ -117,15 +87,12 @@ item you wish to affect.
 - Write your changes and save.
 - Rebuild the cache so your changes are available.
 
-
 FILES INFORMATION
 -----------------
 In each directory you can read information about it and its files. Let's talk
 about some files in our theme root directory!
 
 JSON FILES
-  - bower.json: Bower dependencies, installing automatically with 'bower
-  install' after 'npm install'.
   - package.json: Npm dependencies, for 'npm install'. If you want a new
   dependency for your project 'npm install your-dependency --save' will save
   your dependency in this file.
@@ -141,7 +108,6 @@ YML/PHP FILES
   - da_vinci.info.yml: The main file of our theme. We define name, version,
   base theme... Also we define our regions, and call to our css/js libraries.
   - da_vinci.libraries.yml: To define our css and js libraries.
-  - da_vinci.sass-lint.yml: Config for Sass Lint.
   - da_vinci.theme: See 'USAGE 5.- Preprocess' for more info.
   - theme-settings.php: Config and Da Vinci settings that you can admin in
   admin/appearance/settings/da_vinci
@@ -153,7 +119,6 @@ IMG FILES
   settings.
   - screenshot.png: The main image of the theme that you see in Appearance,
   you can override for add your own.
-
 
 MAINTAINERS
 -----------

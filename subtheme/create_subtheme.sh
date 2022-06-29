@@ -32,4 +32,5 @@ rm LICENSE.txt
 # mv {_,}$CUSTOM_DA_VINCI.theme
 grep -Rl da_vinci .|xargs sed -i -e "s/da_vinci/$CUSTOM_DA_VINCI/"
 sed -i -e "s/Da Vinci/$CUSTOM_DA_VINCI_NAME/" $CUSTOM_DA_VINCI.info.yml
+sed -i -e "s/classy/da_vinci/" $CUSTOM_DA_VINCI.info.yml
 echo "# Check the themes/custom folder for your new sub-theme."

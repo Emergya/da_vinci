@@ -1,6 +1,5 @@
 IMAGES
-------
+---
 
-Place all the images you want to use in your theme (whether it is in templates
-or in styles) in this directory.
-Not included here our default logo, favicon and screenshot for Appearance.
+Please don't add any image in this folder, must be in assets/images folder. 
+If Gulp compiles, or someone do a clean task, you can lose your images.
