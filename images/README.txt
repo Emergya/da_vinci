@@ -6,7 +6,7 @@ In the 'chosen' folder are the default images that the plugin chosen gives us.
 
 
 ===========
-  ESPAÑOL
+  ESPAÑOLsdfsdfsdfafsadfsadfsadf
 ===========
 
 IMAGES
